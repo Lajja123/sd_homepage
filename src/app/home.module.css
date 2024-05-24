@@ -8,7 +8,7 @@
   background-size: cover;
 }
 .sec1{
-  width: 75%;
+  width: 85%;
   margin: 0px auto;
   margin-top: 50px;
 }
@@ -100,7 +100,7 @@
   .sec2Main{
     margin-top: 10% !important;
     margin-bottom: 30px !important;
-    width: 75%;
+    width: 85%;
     margin: 0px auto;
   }
   .sec2Pera{
@@ -171,7 +171,7 @@
   .sec3Main{
     margin-top:  50px!important;
     margin-bottom: 30px !important;
-    width: 75%;
+    width: 85%;
     margin: 0px auto;
   }
   .usecaseMain{
@@ -186,27 +186,6 @@
     border: 1px solid #ab00ff;
 }
 
-.cardofgetstart:hover{
-    background: radial-gradient(circle at 50% 0, #380054, #1c0e27 49%, #100e11), linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .05) 50%);
-}
-
-.cardofgetstart:hover button{
-    background-color: #ab00ff;
-    border: none;
-}
-
-.cardofgetstart{
-    width: 300px;
-    height: 180px;
-    border-radius: 10px;
-    border: 1px solid #3b3b3b;
-    margin: 10px 15px;
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    background: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .05) 50%);
-    justify-content: space-evenly;
-}
 
 .card{
   width: 300px;
@@ -418,3 +397,174 @@ padding: 20px;
     background: #1615237A;
     border: 1px solid #FFFFFF
   }
+  /* ........sec5........ */
+  .sec5Title{
+    text-align: center;
+    font-weight: 200;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: white;
+  }
+  .cardGet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cardofgetstart:hover{
+  background: radial-gradient(circle at 50% 0, #380054, #1c0e27 49%, #100e11), linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .05) 50%);
+}
+
+.cardofgetstart:hover button{
+  background-color: #ab00ff;
+  border: none;
+}
+.cardofgetstart button{
+  background: #1615237A;
+  border: 0.8px solid #FFFFFF;
+  padding: 10px 30px;
+}
+.cardofgetstart{
+  width: 300px;
+  height: 180px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  margin: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: linear-gradient(180deg, rgba(22, 16, 32, 0.765) 0%, rgba(19, 32, 57, 0.9) 100%);
+  justify-content: space-evenly;
+}
+/* .snake section........ */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.stepWrapper {
+  margin: 30px;
+  margin-bottom: 200px;
+  position: relative;
+}
+
+.lineStep {
+  text-align: center;
+  max-width: 250px;
+  position: absolute;
+}
+
+.num {
+  padding: 13px;
+  color: #fff;
+  border-radius: 100px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background: linear-gradient(180deg, #9272F7 0%, #4C3698 100%);
+  line-height: 40px;
+  font-weight: bold;
+  /* background: #ab00ff; */
+  transition: scale 0.5s;
+}
+
+/* Adjusted CSS for 'p' selector */
+p.snakeText {
+  width: 250px;
+  position: absolute;
+  margin-top: 7px;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 18px;
+}
+
+.path {
+  visibility: hidden;
+  stroke: white;
+}
+
+p.top {
+  bottom: 50px;
+  left: -110px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+p.bottom {
+  left: -110px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+p.left {
+  width: 200px;
+  right: 34px;
+  top: -17px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+p.right {
+  width: 200px;
+  left: 34px;
+  top: -17px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.lineStep, .path {
+  visibility: hidden;
+}
+
+.moveLine .path {
+  visibility: visible;
+  stroke-dasharray: 3700;
+  border-style: dashed;
+  stroke-dashoffset: 3700;
+  animation: moveline 4s linear forwards;
+}
+
+.moveLine .lineStep {
+  animation-name: show-step-item;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+}
+
+.moveLine .lineStep1 { animation-delay: .4s; }
+.moveLine .lineStep2 { animation-delay: .8s; }
+.moveLine .lineStep3 { animation-delay: 1.2s; }
+.moveLine .lineStep4 { animation-delay: 1.6s; }
+.moveLine .lineStep5 { animation-delay: 2s; }
+.moveLine .lineStep6 { animation-delay: 2.4s; }
+.moveLine .lineStep7 { animation-delay: 2.8s; }
+.moveLine .lineStep8 { animation-delay: 3.2s; }
+
+@keyframes show-step-item {
+  from { transform: scale(.2); opacity: 0 }
+  to { visibility: visible; transform: scale(1); opacity: 1 }
+}
+
+@keyframes moveline {
+  to { stroke-dashoffset: 0; }
+}
+
+.num:hover{
+  scale: 1.3;
+}
+.divheadertag h3{
+  position: absolute;
+  background: linear-gradient(90deg, rgba(50, 37, 67, 0.32) 0%, rgba(102, 43, 187, 0.32) 100%);
+color: white;
+font-size: 15px;
+font-weight: 200;
+letter-spacing: 1px;
+margin: 0px;
+margin-left: 160px;
+padding: 10px 20px;
+border-radius: 10px;
+}
