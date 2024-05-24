@@ -2,6 +2,9 @@ import Image from "next/image";
 import Navbar from "./navbar";
 import home from "./home.module.css";
 import "../app/chain.css"
+import a from "./assests/1.png";
+import b from "./assests/2.png";
+import c from "./assests/3.png";
 
 export default function Home() {
   return (
@@ -68,14 +71,42 @@ export default function Home() {
         </div>
       </article>
       </section>
-      {/* <section>
-        <div>
+      <section className={home.sec2Main}>
+        <div className={home.sec2Div}>
+        <div className={home.sec2Title}>
         About SmartDisperse
         </div>
-        <div>
+        <div className={home.sec2Pera}>
         Connext is a fast and secure modular interoperability protocol, powered by intents.
         </div>
-      </section> */}
+        </div>
+       
+        <div className={home.gridContentMain}>
+      <div className={home.gridContent}>
+      <div className={home.gridBox1}>
+      <div className={home.gridImg}>
+      <Image src={b} alt='none' width={100} height={100}/>
+      </div>
+      <h6>Fast</h6>
+      <div className={home.box1Pera}>Connext’s intent layer enables lightning fast crosschain txs and aim to provide.</div>
+      </div>
+      <div className={home.gridBox1}>
+      <div className={home.gridImg}>
+      <Image src={c} alt='none' width={100} height={100}/>
+      </div>
+      <h6>Secure</h6>
+      <div className={home.box1Pera}>Connext inherits its security from the canonical bridges themselves to secure data and transactions across chains.</div>
+      </div>
+      <div className={home.gridBox1}>
+      <div className={home.gridImg}>
+      <Image src={a} alt='none' width={100} height={100}/>
+      </div>
+      <h6>Developer Friendly</h6>
+      <div className={home.box1Pera}>Developers consistently choose Connext for its simplicity, ease of integration, and strong developer support.</div>
+      </div>
+      </div>
+      </div>
+      </section>
     </main>
   );
 }

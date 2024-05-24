@@ -8,8 +8,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(180deg, rgba(23, 23, 72, 0.67) 0%, rgba(56, 13, 105, 0.4891) 100%);
-  min-height: 100vh;
+background: linear-gradient(180deg, rgb(23 23 72) 0%, rgb(56 13 105) 100%); 
+ min-height: 100vh;
+ background-repeat: no-repeat;
   margin: 0;
 }
 
