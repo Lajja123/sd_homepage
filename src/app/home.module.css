@@ -166,3 +166,255 @@
   .sec2Div{
     padding-bottom: 30px;
   }
+
+  /* .......sec3.... */
+  .sec3Main{
+    margin-top:  50px!important;
+    margin-bottom: 30px !important;
+    width: 75%;
+    margin: 0px auto;
+  }
+  .usecaseMain{
+    padding: 70px 0px;
+}
+
+.getstartbtn{
+    padding: 10px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    border: 1px solid #ab00ff;
+}
+
+.cardofgetstart:hover{
+    background: radial-gradient(circle at 50% 0, #380054, #1c0e27 49%, #100e11), linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .05) 50%);
+}
+
+.cardofgetstart:hover button{
+    background-color: #ab00ff;
+    border: none;
+}
+
+.cardofgetstart{
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+    border: 1px solid #3b3b3b;
+    margin: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .05) 50%);
+    justify-content: space-evenly;
+}
+
+.card{
+  width: 300px;
+    height: 240px;
+    border-radius: 10px;
+    border-left-color: rgb(23 23 72) ;
+    margin: 10px 15px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    padding: 15px;
+    background: linear-gradient(180deg, rgba(22, 16, 32, 0.765) 0%, rgba(9, 2, 30, 0.9) 100%);
+    justify-content: space-around;
+}
+
+.card:hover{
+    background: radial-gradient(circle at 50% 0, #380054, #1c0e27 49%, #100e11), linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .05) 50%);
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageincard {
+    border-radius: 10px;
+}
+.cardimage{
+    /* border: 1px solid white; */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.cardimage img{
+  width: 30px;
+  height: auto;
+  background: linear-gradient(139.17deg, #27253E 18.33%, #101421 86.09%);
+border-radius: 50px;
+padding: 20px;
+}
+.cardcontent2{
+    font-size: 13px;
+    font-weight: 200;
+    margin: 14px 0px;
+}
+
+.cardcontent1{
+    margin: 7px 0px;
+    font-size: 20px;
+    font-weight: 600;
+}
+/* .........sec4 */
+.sec21{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  margin-top: 10% !important;
+  }
+ 
+  
+  .outerWrapper{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .logoWrapper{
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+  }
+  .innerWrapper{
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+  }
+  .mainlogo{
+    background-color: rgba(236, 81, 104, 0);
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      height: auto;
+      padding: 0%;
+      display: flex;
+      box-shadow: 0 0 30px 15px rgba(212,212,212,.63);
+  }
+  .logodiv img{
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+  }
+  .MidWrapper{
+    position: absolute;
+      top: 0%;
+      bottom: 0%;
+      left: 0%;
+      right: 0%;
+  }
+  .midcircle{
+    z-index: 0;
+      opacity: .8;
+      width: 80%;
+      position: absolute;
+      top: 10%;
+      bottom: 0%;
+      left: 10%;
+      right: 0%;
+      height: auto;
+  }
+  .outercircle {
+    opacity: .9;
+    width: 100%;
+  }
+  .innercircle{
+    z-index: 0;
+    opacity: .8;
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    bottom: 0%;
+    left: 20%;
+    right: 0%;
+    height: auto;
+  }
+  .chainCircle{
+    justify-content: center;
+      align-items: center;
+      width: 420px;
+      height: 420px;
+      display: flex;
+      position: relative;
+  }
+  .flexContent{
+    max-width:28rem;
+    color: white;
+    margin: 0 8%;
+  }
+  .flexContent h2{
+    font-size: 2.25rem;
+      line-height: 2.9rem;
+      font-weight: 300;
+      margin: 0;
+      letter-spacing: 1px;
+      
+  }
+  .flexpera{
+    padding: 15px 0px;
+    font-size: 15px;
+    font-weight: 200;
+    color: rgb(204 202 211/var(--opacity));
+  }
+  .logoinner{
+    width: 40px;
+    height: 40px;
+    z-index: 5;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 1px 5px 2px rgba(161,161,161,.39);
+    top: 0%;
+    bottom: auto;
+    right: auto;
+    left: 0%;
+  
+  }
+  .logoinner.base{
+    top: auto;
+    bottom: 19%;
+    left: auto;
+    right: 2%;
+  }
+  .logoinner.eth{
+    top: 25%;
+    left: 25%;
+  }
+  .logoinner.optimism{
+    left: -5%;
+    top: 57%;
+  }
+  .logoinner.mode{
+  
+    left: 67%;
+  }
+  .logoinner.scrolll{
+    left: 40%;
+    top: 75%;
+  }
+  .logoinner.tron{
+    left: 74%;
+    top: 38%;
+  }
+  .hApp{
+    padding: 10px 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    color: white;
+    background: #1615237A;
+    border: 1px solid #FFFFFF
+  }
