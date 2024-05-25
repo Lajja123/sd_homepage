@@ -607,6 +607,27 @@ p.right {
   animation-delay: 3.2s;
 }
 
+.slidercompdiv{
+  display: flex;
+  justify-content: center;
+}
+.slideshowcontainer{
+  display: flex;
+  align-items: center;
+}
+
+.nextbtn{
+  font-size: 45px;
+  margin: 5px 10px;
+  font-weight: 900;
+}
+
+.eachslidediv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @keyframes show-step-item {
   from {
     transform: scale(0.2);
