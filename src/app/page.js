@@ -1,3 +1,5 @@
+"use client"
+import { useState, useEffect } from 'react';
 import Image from "next/image";
 import Navbar from "./navbar";
 import home from "./home.module.css";
@@ -32,6 +34,101 @@ import discord from "./assests/discord.png";
 import telegram from "./assests/telegram.png";
 import twitter from "./assests/twitter.png";
 import mirror from "./assests/mirror.svg";
+import m1 from "../app/assests/m1.png";
+import m2 from "../app/assests/m2.png";
+import m3 from "../app/assests/m3.png";
+
+const Slideshow = () => {
+  const [slideIndex, setSlideIndex] = useState(1);
+
+  useEffect(() => {
+    showSlides(slideIndex);
+  }, [slideIndex]);
+
+  const plusSlides = (n) => {
+    setSlideIndex((prevIndex) => prevIndex + n);
+  };
+
+  const currentSlide = (n) => {
+    setSlideIndex(n);
+  };
+
+  const showSlides = (n) => {
+    let i;
+    const slides = document.getElementsByClassName(home.eachslidediv);
+    const dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) {
+      setSlideIndex(1); // Reset slideIndex to 1 if it exceeds total slides
+      return;
+    }
+    if (n < 1) {
+      setSlideIndex(slides.length);
+      return;
+    }
+    
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    
+    slides[slideIndex - 1].style.display = "flex";
+    dots[slideIndex - 1].className += " active";
+  };
+  
+  return (
+    <div className={home.slideshowcontainer}>
+         <a className={home.nextbtn} onClick={() => plusSlides(-1)}>
+        ❮
+      </a>
+      <div>
+
+      <div className={home.eachslidediv}>
+        <h1 className="numbertext">Current Milestones</h1>
+        <Image src={m1} alt='none' width={500} />
+        <div className="text">Alice can send  Native and ERC20 token to multiple users on the same chain within one transaction</div>
+      </div>
+
+      <div className={home.eachslidediv}>
+        <h1 className="numbertext"> Upcoming Milestone - 1</h1>
+        <Image src={m1} alt='none' width={500} />
+        <div className="text">Alice can send  Native and ERC20 token to multiple users on the same chain within one transaction</div>
+      </div>
+
+
+      <div className={home.eachslidediv}>
+      <h1 className="numbertext">Upcoming Milestone - 2  </h1>
+        <Image src={m2} alt='none' width={500} />
+
+        <div className="text">Alice knows the desired chain of alice and bob and can send funds to bob and charlie on the destination chain as well as the source chain in one transaction</div>
+        <div>Alice can transfer both native and ERC20 tokens. for native token, Alice will provide ETH to the contract and that eth will be converted into WETh and bridged to the destination chain. after receiving on destination chain it will be converted to ETH again and disperse. this all will be done in one transaction.</div>
+      </div>
+
+      <div className={home.eachslidediv}>
+      <h1 className="numbertext">Upcoming Milestone - 3</h1>
+
+        <Image src={m3} alt='none' width={500} />
+
+        <div className="text">Alice can send tokens to bob and charlie on one chain and to dev on a different chain within one transaction</div>
+      </div>
+      </div>
+      <a className={home.nextbtn} onClick={() => plusSlides(1)}>
+        ❯
+      </a>
+
+      <br />
+
+      <div style={{ textAlign: 'center' }}>
+        <span className="dot" onClick={() => currentSlide(1)}></span>
+        <span className="dot" onClick={() => currentSlide(2)}></span>
+        <span className="dot" onClick={() => currentSlide(3)}></span>
+        <span className="dot" onClick={() => currentSlide(4)}></span>
+      </div>
+    </div>
+  );
+};
 
 export default function Home() {
   const currentYear = new Date().getFullYear(); // Get the Current Year
@@ -215,6 +312,15 @@ export default function Home() {
             </div>
           </div>
         </article>
+      </section>
+      <section className={home.sec2Main}>
+      <div className={home.sec2Div}>
+
+      <div className={home.sec2Title}>Our Milestones</div>
+      </div>
+      <div className={home.slidercompdiv}>
+        <Slideshow/>
+      </div>
       </section>
       <section className={home.sec2Main}>
         <div className={home.sec2Div}>
