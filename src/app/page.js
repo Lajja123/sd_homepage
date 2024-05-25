@@ -28,8 +28,13 @@ import eth from "./assests/ethereum.png";
 import mode from "./assests/mode.png";
 import optimism from "./assests/optimism.png";
 import tron from "./assests/tron.webp";
+import discord from "./assests/discord.png";
+import telegram from "./assests/telegram.png";
+import twitter from "./assests/twitter.png";
+import mirror from "./assests/mirror.svg";
 
 export default function Home() {
+  const currentYear = new Date().getFullYear(); // Get the Current Year
   return (
     <main>
       <section className={home.homeMain1}>
@@ -224,7 +229,7 @@ export default function Home() {
           <div className={home.gridContent}>
             <div className={home.gridBox1}>
               <div className={home.gridImg}>
-                <Image src={b} alt="none" width={100} height={100} />
+                <Image src={b} alt="none" width={100} height={100} className={home.aboutBox}/>
               </div>
               <h6>Fast</h6>
               <div className={home.box1Pera}>
@@ -234,7 +239,7 @@ export default function Home() {
             </div>
             <div className={home.gridBox1}>
               <div className={home.gridImg}>
-                <Image src={c} alt="none" width={100} height={100} />
+                <Image src={c} alt="none" width={100} height={100} className={home.aboutBox} />
               </div>
               <h6>Secure</h6>
               <div className={home.box1Pera}>
@@ -244,7 +249,7 @@ export default function Home() {
             </div>
             <div className={home.gridBox1}>
               <div className={home.gridImg}>
-                <Image src={a} alt="none" width={100} height={100} />
+                <Image src={a} alt="none" width={100} height={100} className={home.aboutBox}/>
               </div>
               <h6>Developer Friendly</h6>
               <div className={home.box1Pera}>
@@ -264,7 +269,7 @@ export default function Home() {
             <div className={home.cards}>
               <div className={home.card}>
                 <div className={home.cardimage}>
-                  <Image src={box1} alt="none" width={90} />
+                  <Image src={box1} alt="none" width={90} className={home.cardImg1}/>
                 </div>
                 <div className={home.cardcontent}>
                   <div className={home.cardcontent1}>Cross-chain exchange</div>
@@ -275,7 +280,7 @@ export default function Home() {
               </div>
               <div className={home.card}>
                 <div className={home.cardimage}>
-                  <Image src={box2} alt="none" width={90} />
+                  <Image src={box2} alt="none" width={90} className={home.cardImg1}/>
                 </div>
                 <div className={home.cardcontent}>
                   <div className={home.cardcontent1}>
@@ -289,7 +294,7 @@ export default function Home() {
               </div>
               <div className={home.card}>
                 <div className={home.cardimage}>
-                  <Image src={box3} alt="none" width={90} />
+                  <Image src={box3} alt="none" width={90} className={home.cardImg1}/>
                 </div>{" "}
                 <div className={home.cardcontent}>
                   <div className={home.cardcontent1}>
@@ -379,7 +384,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className={home.sec3Main}>
+      <section className={home.sec4Main}>
         <div className={home.snakeSection}>
           <div className={home.divheadertag}>
             <h3 className={home.chains}>SmartDisperse Walkthrough</h3>
@@ -420,7 +425,7 @@ export default function Home() {
                 </span>
                 <p className={home.bottom}>
                   Select Transactions Type
-                  <p>(same-chain/cross-chain ) </p>
+                  <div>(same-chain/cross-chain ) </div>
                 </p>
               </article>
 
@@ -537,7 +542,51 @@ export default function Home() {
             </div>
           </div>
         </div>
+       
       </section>
+      <div className={home.footerouterdiv}>
+      <p className={home.footercopyrightText} style={{ margin: "0px" }}>
+        Copyright © {currentYear} Smart-Disperse | All rights reserved
+      </p>
+      <div
+        className={home.footercopyright}
+        style={{
+          display: "flex",
+
+          margin: "10px 30px",
+          justifyContent: "space-evenly",
+          alignItems: "stretch",
+        }}
+      >
+        <a href="https://discord.gg/W3asyJh7mC" target="blank">
+          <Image
+            src={discord}
+            className={home.footericon}
+            alt=""
+          ></Image>
+        </a>
+        <a href="https://t.me/smartdisperse" target="blank">
+          <Image
+            src={telegram}
+            className={home.footericon}
+            alt=""
+          ></Image>
+        </a>
+        <a href="https://x.com/smart_disperse?s=21" target="blank">
+          <Image
+            src={twitter}
+            className={home.footericon}
+            alt=""
+          ></Image>
+        </a>
+        <Image
+          id={home}
+          src={mirror}
+          className={home.footericon}
+          alt=""
+        ></Image>
+      </div>
+    </div>
     </main>
   );
 }
