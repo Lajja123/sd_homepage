@@ -425,6 +425,7 @@
 .hApp {
   padding: 10px 40px;
   border-radius: 20px;
+  cursor: pointer;
   margin-top: 10px;
   color: white;
   background: #1615237a;
@@ -449,7 +450,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+  margin: 30px 0px;
+ 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cardofgetstart:hover {
