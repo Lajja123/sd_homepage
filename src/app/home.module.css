@@ -674,6 +674,35 @@ p.right {
   width: 80%;
   margin: 0px auto;
 }
+/* ..........slider............ */
+.numbertext{
+  color: white;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.text{
+  color: white;
+  letter-spacing: 1px;
+  font-size: 15px;
+  padding: 30px 0px;
+  text-align: justify;
+  width: 600px;
+}
+.nextbtn{
+  /* background: linear-gradient(180deg, #9272f7 0%, #4c3698 100%); */
+  color: white;
+/* padding: 10px; */
+/* border-radius: 30px; */
+cursor: pointer;
+}
+.eachslidediv{
+  display: flex;
+    margin: 0px 50px;
+    width: 800px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(22, 16, 32, 0.765) 0%, rgba(19, 32, 57, 0.9) 100%);
+
+}
 /* ..........footer........... */
 
 .footericon:hover {

@@ -86,32 +86,32 @@ const Slideshow = () => {
       <div>
 
       <div className={home.eachslidediv}>
-        <h1 className="numbertext">Current Milestones</h1>
-        <Image src={m1} alt='none' width={500} />
-        <div className="text">Alice can send  Native and ERC20 token to multiple users on the same chain within one transaction</div>
+        <h1 className={home.numbertext}>Current Milestones</h1>
+        <Image src={m1} alt='none' width={600}  height={"auto"}/>
+        <div className={home.text}>Alice can send  Native and ERC20 token to multiple users on the same chain within one transaction</div>
       </div>
 
       <div className={home.eachslidediv}>
-        <h1 className="numbertext"> Upcoming Milestone - 1</h1>
-        <Image src={m1} alt='none' width={500} />
-        <div className="text">Alice can send  Native and ERC20 token to multiple users on the same chain within one transaction</div>
+        <h1 className={home.numbertext}> Upcoming Milestone - 1</h1>
+        <Image src={m1} alt='none' width={600} />
+        <div className={home.text}>Alice can send  Native and ERC20 token to multiple users on the same chain within one transaction</div>
       </div>
 
 
       <div className={home.eachslidediv}>
-      <h1 className="numbertext">Upcoming Milestone - 2  </h1>
-        <Image src={m2} alt='none' width={500} />
+      <h1 className={home.numbertext}>Upcoming Milestone - 2  </h1>
+        <Image src={m2} alt='none' width={600} height={300} />
 
-        <div className="text">Alice knows the desired chain of alice and bob and can send funds to bob and charlie on the destination chain as well as the source chain in one transaction</div>
-        <div>Alice can transfer both native and ERC20 tokens. for native token, Alice will provide ETH to the contract and that eth will be converted into WETh and bridged to the destination chain. after receiving on destination chain it will be converted to ETH again and disperse. this all will be done in one transaction.</div>
+        <div className={home.text}>Alice knows the desired chain of alice and bob and can send funds to bob and charlie on the destination chain as well as the source chain in one transaction.<br/> Alice can transfer both native and ERC20 tokens. for native token, Alice will provide ETH to the contract and that eth will be converted into WETh and bridged to the destination chain. after receiving on destination chain it will be converted to ETH again and disperse. this all will be done in one transaction.</div>
+
       </div>
 
       <div className={home.eachslidediv}>
-      <h1 className="numbertext">Upcoming Milestone - 3</h1>
+      <h1 className={home.numbertext}>Upcoming Milestone - 3</h1>
 
-        <Image src={m3} alt='none' width={500} />
+        <Image src={m3} alt='none' width={600} />
 
-        <div className="text">Alice can send tokens to bob and charlie on one chain and to dev on a different chain within one transaction</div>
+        <div className={home.text}>Alice can send tokens to bob and charlie on one chain and to dev on a different chain within one transaction</div>
       </div>
       </div>
       <a className={home.nextbtn} onClick={() => plusSlides(1)}>
