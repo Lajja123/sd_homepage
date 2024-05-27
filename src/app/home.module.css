@@ -8,9 +8,14 @@
   background-size: cover;
 }
 .sec1 {
-  width: 80%;
   margin: 0px auto;
-  margin-top: 120px;
+  margin-top: 130px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.colLeft {
+  width: 50%;
 }
 .titleSame1 {
   z-index: 1;
@@ -73,12 +78,16 @@
   color: white;
   cursor: pointer;
   margin: 0px 10px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
 }
 .hLaunch:hover {
   border: none;
   cursor: pointer;
   border: 1px solid #9272f7;
   box-shadow: 0px 4px 16.3px 0px #9272f7 inset;
+  transform: translate(0) rotate(0) skewX(0) skewY(0) scaleX(1.04) scaleY(1.04);
 }
 /* ...........sec2............... */
 
@@ -88,7 +97,7 @@
   font-size: 2rem;
   letter-spacing: 2px;
   text-align: center;
-  margin-top: 160px;
+  margin-top: 150px;
   margin-bottom: 30px;
 }
 .sec2Title {
@@ -98,7 +107,7 @@
   letter-spacing: 1px;
 }
 .sec2Main {
-  margin-top: 10% !important;
+  margin-top: 8% !important;
   margin-bottom: 30px !important;
   width: 80%;
   margin: 0px auto;
@@ -108,6 +117,7 @@
   font-size: 15px;
   letter-spacing: 1px;
   font-weight: 200;
+  padding-top: 8px;
 }
 .gridContentMain {
   z-index: 5;
@@ -169,7 +179,7 @@
 
 /* .......sec3.... */
 .sec3Main {
-  margin-top: 50px !important;
+  margin-top: 90px !important;
   margin-bottom: 30px !important;
   width: 80%;
   margin: 0px auto;
@@ -184,8 +194,13 @@
   background-color: black;
   color: white;
   border: 1px solid #ab00ff;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
 }
-
+.getstartbtn:hover {
+  transform: translate(0) rotate(0) skewX(0) skewY(0) scaleX(1.04) scaleY(1.04);
+}
 .card {
   width: 300px;
   height: 240px;
@@ -217,17 +232,23 @@
 }
 .card:hover .cardImg1 {
   border: 1px solid;
-  border-image-source: linear-gradient(310.46deg, #000000 49.65%, #9F53FF 83.37%);  
+  border-image-source: linear-gradient(
+    310.46deg,
+    #000000 49.65%,
+    #9f53ff 83.37%
+  );
   background: linear-gradient(139.17deg, #27253e 18.33%, #101421 86.09%);
   box-shadow: -11px -4px 34.7px 0px #b659ff57;
 }
 .cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
   align-items: center;
+  max-width: 75em;
 }
-.aboutBox{
+.aboutBox {
   margin-left: 70px;
 }
 
@@ -252,12 +273,20 @@
   font-size: 13px;
   font-weight: 200;
   margin: 14px 0px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  white-space: normal;
 }
 
 .cardcontent1 {
   margin: 7px 0px;
   font-size: 20px;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 /* .........sec4 */
 .sec21 {
@@ -273,16 +302,9 @@
   width: 100%;
   height: 100%;
   position: relative;
-  animation: rotateAnimation 10s linear infinite;
+  /* animation: rotateAnimation1 15s linear infinite; */
 }
-@keyframes rotateAnimation {
-  from {
-    transform: rotateZ(360deg);
-  }
-  to {
-    transform: rotateZ(0deg);
-  }
-}
+
 .logoWrapper {
   border-radius: 50%;
   justify-content: center;
@@ -300,7 +322,7 @@
   bottom: 0%;
   left: 0%;
   right: 0%;
-  animation: rotateAnimation 10s linear infinite;
+  animation: rotateAnimation 15s linear infinite;
 }
 @keyframes rotateAnimation {
   from {
@@ -423,19 +445,22 @@
   top: 38%;
 }
 .hApp {
-  padding: 10px 40px;
-  border-radius: 20px;
+  padding: 15px 50px;
+  border-radius: 30px;
   cursor: pointer;
   margin-top: 10px;
   color: white;
   background: #1615237a;
   border: 1px solid #ffffff;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
 }
-.hApp:hover{
+.hApp:hover {
   background: #16152380;
-  border: 1px solid #FFFFFF;
-  box-shadow: 0px 4px 16.3px 0px #9272F7 inset;
-
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 16.3px 0px #9272f7 inset;
+  transform: translate(0) rotate(0) skewX(0) skewY(0) scaleX(1.04) scaleY(1.04);
 }
 /* ........sec5........ */
 .sec5Title {
@@ -448,25 +473,28 @@
 .cardGet {
   display: flex;
   flex-direction: row;
+  max-width: 75em;
   justify-content: space-between;
+  margin: 0 auto;
   align-items: center;
-  margin: 30px 0px;
- 
+  margin: 30px auto;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cardofgetstart:hover {
-  background: linear-gradient(180deg, rgba(105, 119, 255, 0.9) 0%, rgba(37, 35, 59, 0.9) 100%);
-  border: 1px solid #9272F7;
-  box-shadow: 0px 4px 120.8px 0px #3B7DFFAB inset;
-
+  background: linear-gradient(
+    180deg,
+    rgba(105, 119, 255, 0.9) 0%,
+    rgba(37, 35, 59, 0.9) 100%
+  );
+  border: 1px solid #9272f7;
+  box-shadow: 0px 4px 120.8px 0px #3b7dffab inset;
 }
 
 .cardofgetstart:hover button {
-  box-shadow: 0px 2.85px 11.63px 0px #9272F7 inset;
-  border: 0.71px solid #FFFFFF;
-  background: #0E1210CC;
-
+  box-shadow: 0px 2.85px 11.63px 0px #9272f7 inset;
+  border: 0.71px solid #ffffff;
+  background: #0e1210cc;
 }
 .cardofgetstart button {
   background: #1615237a;
@@ -476,16 +504,20 @@
 .cardofgetstart {
   width: 300px;
   cursor: pointer;
-  height: 180px;
+  height: 230px;
   border-radius: 20px;
   border: none;
   color: white;
   margin: 10px 15px;
   display: flex;
   flex-direction: column;
-  padding: 15px 25px  ;
-  background: linear-gradient(180deg, rgba(22, 16, 32, 0.765) 0%, rgba(19, 32, 57, 0.9) 100%);
-backdrop-filter: blur(3px);
+  padding: 15px 25px;
+  background: linear-gradient(
+    180deg,
+    rgba(22, 16, 32, 0.765) 0%,
+    rgba(19, 32, 57, 0.9) 100%
+  );
+  backdrop-filter: blur(3px);
   justify-content: space-evenly;
 }
 /* .snake section........ */
@@ -508,12 +540,13 @@ backdrop-filter: blur(3px);
 }
 
 .num {
-  padding: 13px;
+  padding: 10px;
   color: #fff;
   border-radius: 100px;
   display: inline-block;
   width: 30px;
-  height: 30px;
+  height: auto;
+  cursor: pointer;
   text-align: center;
   background: linear-gradient(180deg, #9272f7 0%, #4c3698 100%);
   line-height: 40px;
@@ -610,22 +643,22 @@ p.right {
   animation-delay: 3.2s;
 }
 
-.slidercompdiv{
+.slidercompdiv {
   display: flex;
   justify-content: center;
 }
-.slideshowcontainer{
+.slideshowcontainer {
   display: flex;
   align-items: center;
 }
 
-.nextbtn{
+.nextbtn {
   font-size: 45px;
   margin: 5px 10px;
   font-weight: 900;
 }
 
-.eachslidediv{
+.eachslidediv {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -664,7 +697,7 @@ p.right {
   font-weight: 200;
   letter-spacing: 1px;
   margin: 0px;
-  margin-left: 160px;
+  margin-left: 240px;
   padding: 10px 20px;
   border-radius: 10px;
 }
@@ -675,12 +708,12 @@ p.right {
   margin: 0px auto;
 }
 /* ..........slider............ */
-.numbertext{
+.numbertext {
   color: white;
   font-weight: 200;
   letter-spacing: 1px;
 }
-.text{
+.text {
   color: white;
   letter-spacing: 1px;
   font-size: 15px;
@@ -688,70 +721,407 @@ p.right {
   text-align: justify;
   width: 600px;
 }
-.nextbtn{
+.nextbtn {
   /* background: linear-gradient(180deg, #9272f7 0%, #4c3698 100%); */
   color: white;
-/* padding: 10px; */
-/* border-radius: 30px; */
-cursor: pointer;
+  /* padding: 10px; */
+  /* border-radius: 30px; */
+  cursor: pointer;
 }
-.eachslidediv{
+.eachslidediv {
   display: flex;
-    margin: 0px 50px;
-    width: 800px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, rgba(22, 16, 32, 0.765) 0%, rgba(19, 32, 57, 0.9) 100%);
+  margin: 0px 50px;
+  width: 800px;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(22, 16, 32, 0.765) 0%,
+    rgba(19, 32, 57, 0.9) 100%
+  );
+}
+/* ..........responsive........... */
+@media only screen and (max-width: 1024px) {
+  .titleSame1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  .titleSame2 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  .peraSame {
+    font-size: 12px;
+    width: 50%;
+  }
+  .cardofgetstart {
+    height: 220px;
+  }
+  .divheadertag h3 {
+    margin-left: 50px;
+  }
+  .box1Pera {
+    font-size: 13px;
+  }
+  .sec2Pera {
+    font-size: 13px;
+  }
+  .cardcontent2 {
+    font-size: 12px;
+    font-weight: 200;
+    margin: 14px 0px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
-}
-/* ..........footer........... */
-
-.footericon:hover {
-  transform: scale(1.2);
-}
-
-#mirroricon {
-  width: auto;
-  height: 28px;
-}
-.footerouterdiv {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0px 20px;
-  text-align: "center";
-  color: white;
-  padding: 0px 0px;
-  font-size: 15px;
-}
-.footericon {
-  margin: 0px 3px;
-  transition: transform 0.3s ease;
+    white-space: normal;
+  }
+  .cardcontent1 {
+    font-size: 16px;
+  }
+  .flexContent {
+    margin: 0 5%;
+    font-size: 2rem;
+  }
+  .mainlogo {
+    background-color: rgba(236, 81, 104, 0);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 0%;
+    display: flex;
+    box-shadow: 0 0 20px 8px rgba(212, 212, 212, 0.63);
+  }
+  .innercircle {
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+  }
+  .logoinner {
+    width: 30px;
+    height: 30px;
+  }
+  .midcircle {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+  }
+  .outerWrapper {
+    width: 80%;
+    height: 80%;
+  }
+  .logoinner.mode {
+    top: 11%;
+  }
+  .logoinner.optimism {
+    left: 7%;
+  }
+  .logoinner.base {
+    right: 17%;
+  }
+  .logoinner.eth {
+    top: 30%;
+    left: 35%;
+  }
+  .logoinner.tron {
+    left: 65%;
+  }
+  .peraSame {
+    width: 100%;
+  }
+  .sec1 {
+    margin-top: 45px;
+  }
+  .chainTitle {
+    margin-top: 100px;
+  }
 }
 @media only screen and (max-width: 768px) {
-  .footerouterdiv {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    margin: 0px;
+  .perabtndiv {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .footercopyrightText {
-    display: none;
+  .sec4Main {
+    margin-top: 90px !important;
+  }
+  .cardofgetstart {
+    height: 180px;
+  }
+  .divheadertag h3 {
+    margin-left: 20px;
+    font-size: 12px;
+  }
+  .peraSame {
+    width: 100%;
+  }
+  .hLaunchMain {
+    margin: 20px 0px;
+  }
+  .sec1 {
+    margin-top: 75px;
+  }
+  .chainTitle {
+    margin-top: 85px;
+    font-size: 1.7rem;
+    margin-top: 50px;
+  }
+  .sec2Pera {
+    font-size: 11px;
+  }
+  .sec2Main {
+    width: 85%;
+  }
+  .aboutBox {
+    margin-left: 50px;
+    width: 70px;
+    height: 70px;
+  }
+  .box1Pera {
+    font-size: 11px;
+  }
+  .gridBox1 h6 {
+    font-size: 1em;
+  }
+  .cardimage {
+    width: 25px;
+  }
+  .sec3Main {
+    width: 90%;
+  }
+  .cardcontent1 {
+    font-size: 12px;
+  }
+  .cardcontent2 {
+    font-size: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    white-space: normal;
+  }
+  .card {
+    height: 200px;
+  }
+  .flexContent {
+    max-width: 25rem;
+  }
+  .flexContent h2 {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+  .flexpera {
+    font-size: 12px;
+  }
+  .logodiv img {
+    width: 30px;
+    height: 30px;
+  }
+  .innercircle {
+    width: 40%;
+    height: 35%;
+    top: 32%;
+    left: 30%;
+  }
+  .logoinner {
+    width: 25px;
+    height: 25px;
+  }
+  .logoinner.scrolll {
+    top: 63%;
+  }
+  .flexContent {
+    margin: 0 2%;
+  }
+
+  p.top {
+    font-size: 10px;
+  }
+
+  p.bottom {
+    font-size: 10px;
+  }
+  p.left {
+    font-size: 10px;
+  }
+  p.right {
+    font-size: 10px;
+  }
+  .num {
+    padding: 5px;
+    width: 37px;
+  }
+  .stepWrapper {
+    margin-bottom: 100px;
+  }
+  .chainCircle {
+    width: 350px;
+    height: 350px;
+  }
+  .colLeft {
+    width: 45%;
+  }
+  .titleSame1 {
+    font-size: 2rem;
   }
 }
-@media only screen and (max-width: 525px) {
-  .footerouterdiv {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+@media only screen and (max-width: 575px) {
+  .titleSame1 {
+    font-size: 1.7rem;
+    letter-spacing: 0.5px;
+  }
+  .titleSame2 {
+    font-size: 1.7rem;
+    letter-spacing: 0.5px;
+  }
+  .chainTitle {
+    font-size: 1.5rem;
+    margin-top: 50px;
+  }
+  .card {
+    height: 150px;
+  }
+  .cardimage img {
+    width: 15px;
+    padding: 10px;
+  }
+  .cardcontent1 {
+    font-size: 10px;
+  }
+  .sec4Main {
+    display: none;
+  }
+  .cardcontent2 {
+    font-size: 8px;
+  }
+  .sec21 {
+    flex-direction: column;
+  }
+  .flexContent {
+    max-width: 27rem;
+  }
+  .cardGet {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .flexContent {
+    max-width: 20rem;
+  }
+  .flexpera {
+    font-size: 10px;
+  }
+  .titleSame1 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  .cardofgetstart {
+    width: 250px;
+  }
+  .titleSame2 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  .peraSame {
+    font-size: 10px;
+    margin-top: 12px;
+  }
+  .hLaunch {
+    padding: 10px 30px;
+    font-size: 12px;
+  }
+  .chainTitle {
+    font-size: 1rem;
+    margin-top: 50px;
+  }
+  .sec2Title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .sec2Pera {
+    font-size: 10px;
+  }
+  .logoinner.eth {
+    top: 35%;
+    left: 35%;
+  }
+  .innercircle {
+    left: 31%;
+  }
+  .aboutBox {
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  .cardimage img {
+    width: 25px;
+    padding: 15px;
+  }
+  .cardcontent1 {
+    font-size: 15px;
+  }
+  .card {
+    width: 250px;
+  }
+  .cardcontent2 {
+    font-size: 10px;
+  }
+  .gridContent {
+    flex-direction: column;
+  }
+  .aboutBox {
+    width: 80px;
+    height: 80px;
+    margin-left: 0px;
+  }
+  .gridImg {
+    justify-content: center;
+  }
+  .gridBox1 {
+    font-size: 1.5em;
     align-items: center;
-    padding: 5px 0px;
-    margin: 0px;
   }
-  .footercopyrightText {
-    display: none;
+  .box1Pera {
+    font-size: 12px;
+    text-align: center;
   }
-  .footericon {
-    display: none;
+  .cards {
+    flex-direction: column;
+  }
+  .cardGet {
+    flex-direction: column;
+  }
+  .innercircle {
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+  }
+  .logoinner.eth {
+    top: 32%;
+    left: 35%;
+  }
+
+  .hApp {
+    padding: 12px 40px;
+  }
+  .sec1 {
+    flex-direction: column;
+  }
+  .colLeft {
+    width: 80%;
+    text-align: center;
+  }
+  .titleSame1 {
+    font-size: 2rem;
+  }
+  .sec2Pera {
+    text-align: center;
   }
 }

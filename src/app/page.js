@@ -1,5 +1,5 @@
-"use client"
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Navbar from "./navbar";
 import home from "./home.module.css";
@@ -30,13 +30,10 @@ import eth from "./assests/ethereum.png";
 import mode from "./assests/mode.png";
 import optimism from "./assests/optimism.png";
 import tron from "./assests/tron.webp";
-import discord from "./assests/discord.png";
-import telegram from "./assests/telegram.png";
-import twitter from "./assests/twitter.png";
-import mirror from "./assests/mirror.svg";
 import m1 from "../app/assests/m1.png";
 import m2 from "../app/assests/m2.png";
 import m3 from "../app/assests/m3.png";
+import Footer from "./footer";
 
 const Slideshow = () => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -57,7 +54,7 @@ const Slideshow = () => {
     let i;
     const slides = document.getElementsByClassName(home.eachslidediv);
     const dots = document.getElementsByClassName("dot");
-    
+
     if (n > slides.length) {
       setSlideIndex(1); // Reset slideIndex to 1 if it exceeds total slides
       return;
@@ -66,53 +63,68 @@ const Slideshow = () => {
       setSlideIndex(slides.length);
       return;
     }
-    
+
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
-    
+
     slides[slideIndex - 1].style.display = "flex";
     dots[slideIndex - 1].className += " active";
   };
-  
+
   return (
     <div className={home.slideshowcontainer}>
-         <a className={home.nextbtn} onClick={() => plusSlides(-1)}>
+      <a className={home.nextbtn} onClick={() => plusSlides(-1)}>
         ❮
       </a>
       <div>
+        <div className={home.eachslidediv}>
+          <h1 className={home.numbertext}>Current Milestones</h1>
+          <Image src={m1} alt="none" width={600} height={"auto"} />
+          <div className={home.text}>
+            Alice can send  Native and ERC20 token to multiple users on the same
+            chain within one transaction
+          </div>
+        </div>
 
-      <div className={home.eachslidediv}>
-        <h1 className={home.numbertext}>Current Milestones</h1>
-        <Image src={m1} alt='none' width={600}  height={"auto"}/>
-        <div className={home.text}>Alice can send  Native and ERC20 token to multiple users on the same chain within one transaction</div>
-      </div>
+        <div className={home.eachslidediv}>
+          <h1 className={home.numbertext}> Upcoming Milestone - 1</h1>
+          <Image src={m1} alt="none" width={600} />
+          <div className={home.text}>
+            Alice can send  Native and ERC20 token to multiple users on the same
+            chain within one transaction
+          </div>
+        </div>
 
-      <div className={home.eachslidediv}>
-        <h1 className={home.numbertext}> Upcoming Milestone - 1</h1>
-        <Image src={m1} alt='none' width={600} />
-        <div className={home.text}>Alice can send  Native and ERC20 token to multiple users on the same chain within one transaction</div>
-      </div>
+        <div className={home.eachslidediv}>
+          <h1 className={home.numbertext}>Upcoming Milestone - 2 </h1>
+          <Image src={m2} alt="none" width={600} height={300} />
 
+          <div className={home.text}>
+            Alice knows the desired chain of alice and bob and can send funds to
+            bob and charlie on the destination chain as well as the source chain
+            in one transaction.
+            <br /> Alice can transfer both native and ERC20 tokens. for native
+            token, Alice will provide ETH to the contract and that eth will be
+            converted into WETh and bridged to the destination chain. after
+            receiving on destination chain it will be converted to ETH again and
+            disperse. this all will be done in one transaction.
+          </div>
+        </div>
 
-      <div className={home.eachslidediv}>
-      <h1 className={home.numbertext}>Upcoming Milestone - 2  </h1>
-        <Image src={m2} alt='none' width={600} height={300} />
+        <div className={home.eachslidediv}>
+          <h1 className={home.numbertext}>Upcoming Milestone - 3</h1>
 
-        <div className={home.text}>Alice knows the desired chain of alice and bob and can send funds to bob and charlie on the destination chain as well as the source chain in one transaction.<br/> Alice can transfer both native and ERC20 tokens. for native token, Alice will provide ETH to the contract and that eth will be converted into WETh and bridged to the destination chain. after receiving on destination chain it will be converted to ETH again and disperse. this all will be done in one transaction.</div>
+          <Image src={m3} alt="none" width={600} />
 
-      </div>
-
-      <div className={home.eachslidediv}>
-      <h1 className={home.numbertext}>Upcoming Milestone - 3</h1>
-
-        <Image src={m3} alt='none' width={600} />
-
-        <div className={home.text}>Alice can send tokens to bob and charlie on one chain and to dev on a different chain within one transaction</div>
-      </div>
+          <div className={home.text}>
+            Alice can send tokens to bob and charlie on one chain and to dev on
+            a different chain within one transaction
+          </div>
+        </div>
       </div>
       <a className={home.nextbtn} onClick={() => plusSlides(1)}>
         ❯
@@ -120,7 +132,7 @@ const Slideshow = () => {
 
       <br />
 
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: "center" }}>
         <span className="dot" onClick={() => currentSlide(1)}></span>
         <span className="dot" onClick={() => currentSlide(2)}></span>
         <span className="dot" onClick={() => currentSlide(3)}></span>
@@ -131,293 +143,23 @@ const Slideshow = () => {
 };
 
 export default function Home() {
-  const currentYear = new Date().getFullYear(); // Get the Current Year
   return (
     <main>
       <section className={home.homeMain1}>
         <Navbar />
         <div className={home.sec1}>
-          <div className={home.titleSame1}>All Chains, One Solution</div>
-          <div className={home.titleSame2}>Smart-Disperse Your Crypto</div>
-          <div className={home.titleSame2}>Transactions!</div>
-          <div className={home.perabtndiv}>
+          {/* <div className={home.titleSame2}>Smart-Disperse Your Crypto</div>
+          <div className={home.titleSame2}>Transactions!</div> */}
+          <div className={home.colLeft}>
+            <div className={home.titleSame1}>Cross-Chain Made Simple</div>
             <div className={home.peraSame}>
-              Smart-Disperse is the most widely used, extensible, secure cross-
-              chain communications network. Build truly cross-chain applications
-              using the Smart-Disperse Protocol.
-            </div>
-            <div className={home.hLaunchMain}>
-              <button className={home.hLaunch}>Build ➔</button>
-              <button className={home.hLaunch}>Bridge ➔</button>
+              Smart-Disperse Powerd by CCIP revolutionizes token transfers with
+              advanced features for seamless cross-chain interoperability. Our
+              solution reduces gas fees, saves time, and simplifies operations,
+              making cross-chain token transfers as effortless as same-chain
+              transfers.
             </div>
           </div>
-        </div>
-        <div className={home.chainTitle}>Supported Chains</div>
-        <article className={home.wrapper}>
-          <div className="marquee">
-            <div className="marqueegroup">
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  color: "white",
-                }}
-              >
-                <Image
-                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/646ceb33c9240a54fa0c0161_Base.svg"
-                  width={80}
-                  height={100}
-                ></Image>
-                Base
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  color: "white",
-                }}
-              >
-                <Image
-                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/65e09ab37ff439cc89a664e5_Mode%20Network.svg"
-                  width={80}
-                  height={100}
-                ></Image>
-                Mode
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  color: "white",
-                }}
-              >
-                <Image
-                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/646ceb35bd74dc737a9116e7_Scroll.svg"
-                  width={80}
-                  height={100}
-                ></Image>
-                Scroll
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  color: "white",
-                }}
-              >
-                <Image
-                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/64606d96c0388563ae674a42_Optimism.svg"
-                  width={80}
-                  height={100}
-                ></Image>
-                Optimism
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  color: "white",
-                }}
-              >
-                <Image
-                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/64606d95c004d57477b749e5_Ethereum.svg"
-                  width={80}
-                  height={100}
-                ></Image>
-                Ethereum
-              </div>
-            </div>
-
-            <div aria-hidden="true" className="marqueegroup">
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  color: "white",
-                }}
-              >
-                <Image
-                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/646ceb33c9240a54fa0c0161_Base.svg"
-                  width={80}
-                  height={100}
-                ></Image>
-                Base
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  color: "white",
-                }}
-              >
-                <Image
-                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/65e09ab37ff439cc89a664e5_Mode%20Network.svg"
-                  width={80}
-                  height={100}
-                ></Image>
-                Mode
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  color: "white",
-                }}
-              >
-                <Image
-                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/646ceb35bd74dc737a9116e7_Scroll.svg"
-                  width={80}
-                  height={100}
-                ></Image>
-                Scroll
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  color: "white",
-                }}
-              >
-                <Image
-                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/64606d96c0388563ae674a42_Optimism.svg"
-                  width={80}
-                  height={100}
-                ></Image>
-                Optimism
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexDirection: "column",
-                  color: "white",
-                }}
-              >
-                <Image
-                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/64606d95c004d57477b749e5_Ethereum.svg"
-                  width={80}
-                  height={100}
-                ></Image>
-                Ethereum
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section className={home.sec2Main}>
-      <div className={home.sec2Div}>
-
-      <div className={home.sec2Title}>Our Milestones</div>
-      </div>
-      <div className={home.slidercompdiv}>
-        <Slideshow/>
-      </div>
-      </section>
-      <section className={home.sec2Main}>
-        <div className={home.sec2Div}>
-          <div className={home.sec2Title}>About SmartDisperse</div>
-          <div className={home.sec2Pera}>
-            Connext is a fast and secure modular interoperability protocol,
-            powered by intents.
-          </div>
-        </div>
-
-        <div className={home.gridContentMain}>
-          <div className={home.gridContent}>
-            <div className={home.gridBox1}>
-              <div className={home.gridImg}>
-                <Image src={b} alt="none" width={100} height={100} className={home.aboutBox}/>
-              </div>
-              <h6>Fast</h6>
-              <div className={home.box1Pera}>
-                Connext’s intent layer enables lightning fast crosschain txs and
-                aim to provide.
-              </div>
-            </div>
-            <div className={home.gridBox1}>
-              <div className={home.gridImg}>
-                <Image src={c} alt="none" width={100} height={100} className={home.aboutBox} />
-              </div>
-              <h6>Secure</h6>
-              <div className={home.box1Pera}>
-                Connext inherits its security from the canonical bridges
-                themselves to secure data and transactions across chains.
-              </div>
-            </div>
-            <div className={home.gridBox1}>
-              <div className={home.gridImg}>
-                <Image src={a} alt="none" width={100} height={100} className={home.aboutBox}/>
-              </div>
-              <h6>Developer Friendly</h6>
-              <div className={home.box1Pera}>
-                Developers consistently choose Connext for its simplicity, ease
-                of integration, and strong developer support.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className={home.sec3Main}>
-        <div className={home.sec2Div}>
-          <div className={home.sec2Title}>USECASE</div>
-        </div>
-        <div className={home.outerdivofusecases}>
-          <div className={home.cardcontainer}>
-            <div className={home.cards}>
-              <div className={home.card}>
-                <div className={home.cardimage}>
-                  <Image src={box1} alt="none" width={90} className={home.cardImg1}/>
-                </div>
-                <div className={home.cardcontent}>
-                  <div className={home.cardcontent1}>Cross-chain exchange</div>
-                  <div className={home.cardcontent2}>
-                    Swap any asset on any blockchain using Synapse’s token swaps
-                  </div>
-                </div>
-              </div>
-              <div className={home.card}>
-                <div className={home.cardimage}>
-                  <Image src={box2} alt="none" width={90} className={home.cardImg1}/>
-                </div>
-                <div className={home.cardcontent}>
-                  <div className={home.cardcontent1}>
-                    Chain Interoperability
-                  </div>
-                  <div className={home.cardcontent2}>
-                    Send token to multiple recipient on different chains
-                    according to their preferences
-                  </div>
-                </div>
-              </div>
-              <div className={home.card}>
-                <div className={home.cardimage}>
-                  <Image src={box3} alt="none" width={90} className={home.cardImg1}/>
-                </div>{" "}
-                <div className={home.cardcontent}>
-                  <div className={home.cardcontent1}>
-                    Multi-Wallet Transfers
-                  </div>
-                  <div className={home.cardcontent2}>
-                    Send funds to multiple wallets simultaneously, catering to
-                    various use cases.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className={home.sec21}>
           <div className={home.chainCircle}>
             <div className={home.outerWrapper}>
               <Image
@@ -475,21 +217,315 @@ export default function Home() {
               />
             </div>
           </div>
-
-          <div className={home.flexContent}>
-            <h2>Securely connect every blockchain</h2>
-            <div className={home.flexpera}>
-              Synapse is comprised of a cross-chain messaging framework and an
-              economically secure method to reach consensus on the validity of
-              cross-chain transactions, enabling developers to build truly
-              native cross-chain apps.
+        </div>
+        <div className={home.chainTitle}>Supported Chains</div>
+        <article className={home.wrapper}>
+          <div className="marquee">
+            <div className="marqueegroup">
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  color: "white",
+                }}
+              >
+                <Image
+                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/646ceb33c9240a54fa0c0161_Base.svg"
+                  width={80}
+                  height={100}
+                  className="ChainImg"
+                ></Image>
+                Base
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  color: "white",
+                }}
+              >
+                <Image
+                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/65e09ab37ff439cc89a664e5_Mode%20Network.svg"
+                  width={80}
+                  height={100}
+                  className="ChainImg"
+                ></Image>
+                Mode
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  color: "white",
+                }}
+              >
+                <Image
+                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/646ceb35bd74dc737a9116e7_Scroll.svg"
+                  width={80}
+                  height={100}
+                  className="ChainImg"
+                ></Image>
+                Scroll
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  color: "white",
+                }}
+              >
+                <Image
+                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/64606d96c0388563ae674a42_Optimism.svg"
+                  width={80}
+                  height={100}
+                  className="ChainImg"
+                ></Image>
+                Optimism
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  color: "white",
+                }}
+              >
+                <Image
+                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/64606d95c004d57477b749e5_Ethereum.svg"
+                  width={80}
+                  height={100}
+                  className="ChainImg"
+                ></Image>
+                Ethereum
+              </div>
             </div>
-            <div>
-              <button className={home.hApp}>App</button>
+
+            <div aria-hidden="true" className="marqueegroup">
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  color: "white",
+                }}
+              >
+                <Image
+                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/646ceb33c9240a54fa0c0161_Base.svg"
+                  width={80}
+                  height={100}
+                  className="ChainImg"
+                ></Image>
+                Base
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  color: "white",
+                }}
+              >
+                <Image
+                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/65e09ab37ff439cc89a664e5_Mode%20Network.svg"
+                  width={80}
+                  height={100}
+                  className="ChainImg"
+                ></Image>
+                Mode
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  color: "white",
+                }}
+              >
+                <Image
+                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/646ceb35bd74dc737a9116e7_Scroll.svg"
+                  width={80}
+                  height={100}
+                  className="ChainImg"
+                ></Image>
+                Scroll
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  color: "white",
+                }}
+              >
+                <Image
+                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/64606d96c0388563ae674a42_Optimism.svg"
+                  width={80}
+                  height={100}
+                  className="ChainImg"
+                ></Image>
+                Optimism
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  color: "white",
+                }}
+              >
+                <Image
+                  src="https://assets-global.website-files.com/63996d8b3c061af402fa0609/64606d95c004d57477b749e5_Ethereum.svg"
+                  width={80}
+                  height={100}
+                  className="ChainImg"
+                ></Image>
+                Ethereum
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section className={home.sec2Main}>
+        <div className={home.sec2Div}>
+          {/* <div className={home.sec2Title}>Our Milestones</div> */}
+        </div>
+        <div className={home.slidercompdiv}>{/* <Slideshow /> */}</div>
+      </section>
+      <section className={home.sec2Main}>
+        <div className={home.sec2Div}>
+          <div className={home.sec2Title}>About SmartDisperse</div>
+          <div className={home.sec2Pera}>
+            SmartDisperse leverages CCIP to enhance cross-chain interoperability
+          </div>
+        </div>
+
+        <div className={home.gridContentMain}>
+          <div className={home.gridContent}>
+            <div className={home.gridBox1}>
+              <div className={home.gridImg}>
+                <Image
+                  src={b}
+                  alt="none"
+                  width={100}
+                  height={100}
+                  className={home.aboutBox}
+                />
+              </div>
+              <h6>Fast</h6>
+              <div className={home.box1Pera}>
+                SmartDisperse prioritizes speed by analyzing the best routes for
+                your token transfers across chains.
+              </div>
+            </div>
+            <div className={home.gridBox1}>
+              <div className={home.gridImg}>
+                <Image
+                  src={c}
+                  alt="none"
+                  width={100}
+                  height={100}
+                  className={home.aboutBox}
+                />
+              </div>
+              <h6>Secure</h6>
+              <div className={home.box1Pera}>
+                Built on CCIP, SmartDisperse inherits robust security features,
+                ensuring support in case of any issues.
+              </div>
+            </div>
+            <div className={home.gridBox1}>
+              <div className={home.gridImg}>
+                <Image
+                  src={a}
+                  alt="none"
+                  width={100}
+                  height={100}
+                  className={home.aboutBox}
+                />
+              </div>
+              <h6>User Friendly</h6>
+              <div className={home.box1Pera}>
+                You can store your preferred chains and tokens directly on the
+                blockchain, reducing effort and ensuring tokens are sent to the
+                chains you use most or that are most beneficial to you
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <section className={home.sec3Main}>
+        <div className={home.sec2Div}>
+          <div className={home.sec2Title}>USECASE</div>
+        </div>
+        <div className={home.outerdivofusecases}>
+          <div className={home.cardcontainer}>
+            <div className={home.cards}>
+              <div className={home.card}>
+                <div className={home.cardimage}>
+                  <Image
+                    src={box1}
+                    alt="none"
+                    width={90}
+                    className={home.cardImg1}
+                  />
+                </div>
+                <div className={home.cardcontent}>
+                  <div className={home.cardcontent1}>Dispersing prize </div>
+                  <div className={home.cardcontent2}>
+                    Send prize amounts to multiple addresses in their preferred
+                    tokens and chains. Even if you don’t hold the specific
+                    tokens, SmartDisperse will swap them for the recipients’
+                    preferred tokens, saving time and gas fees, and enhancing
+                    user satisfaction.
+                  </div>
+                </div>
+              </div>
+              <div className={home.card}>
+                <div className={home.cardimage}>
+                  <Image
+                    src={box2}
+                    alt="none"
+                    width={90}
+                    className={home.cardImg1}
+                  />
+                </div>
+                <div className={home.cardcontent}>
+                  <div className={home.cardcontent1}>Sending Gas</div>
+                  <div className={home.cardcontent2}>
+                    If an address holds ERC-20 tokens but lacks gas,
+                    SmartDisperse allows you to acquire the needed gas using
+                    your ERC-20 tokens, facilitating smooth transactions.
+                  </div>
+                </div>
+              </div>
+              <div className={home.card}>
+                <div className={home.cardimage}>
+                  <Image
+                    src={box3}
+                    alt="none"
+                    width={90}
+                    className={home.cardImg1}
+                  />
+                </div>{" "}
+                <div className={home.cardcontent}>
+                  <div className={home.cardcontent1}>
+                    Multi-Wallet Transfers
+                  </div>
+                  <div className={home.cardcontent2}>
+                    Easily send funds to multiple wallets at once, streamlining
+                    transactions for a variety of use cases.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className={home.sec4Main}>
         <div className={home.snakeSection}>
           <div className={home.divheadertag}>
@@ -648,51 +684,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-       
       </section>
-      <div className={home.footerouterdiv}>
-      <p className={home.footercopyrightText} style={{ margin: "0px" }}>
-        Copyright © {currentYear} Smart-Disperse | All rights reserved
-      </p>
-      <div
-        className={home.footercopyright}
-        style={{
-          display: "flex",
-
-          margin: "10px 30px",
-          justifyContent: "space-evenly",
-          alignItems: "stretch",
-        }}
-      >
-        <a href="https://discord.gg/W3asyJh7mC" target="blank">
-          <Image
-            src={discord}
-            className={home.footericon}
-            alt=""
-          ></Image>
-        </a>
-        <a href="https://t.me/smartdisperse" target="blank">
-          <Image
-            src={telegram}
-            className={home.footericon}
-            alt=""
-          ></Image>
-        </a>
-        <a href="https://x.com/smart_disperse?s=21" target="blank">
-          <Image
-            src={twitter}
-            className={home.footericon}
-            alt=""
-          ></Image>
-        </a>
-        <Image
-          id={home}
-          src={mirror}
-          className={home.footericon}
-          alt=""
-        ></Image>
-      </div>
-    </div>
+      <Footer />
     </main>
   );
 }
