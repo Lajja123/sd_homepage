@@ -34,7 +34,7 @@ const Carousel = (props) => {
                 <img
                   className="embla__slide__img embla__parallax__img"
                   src={
-                    "https://gateway.lighthouse.storage/ipfs/QmeULQXdt2Tqd3idNbkpFmzswrNDC638bXz296wTJACm7y"
+                    "https://gateway.lighthouse.storage/ipfs/QmeiZvhkJWn5twr7KtWJ74UpZRBUkgKVv4BLLZPDWHTQfg"
                   }
                   alt="Your alt text"
                 />
@@ -47,7 +47,7 @@ const Carousel = (props) => {
                 <img
                   className="embla__slide__img embla__parallax__img"
                   src={
-                    "https://gateway.lighthouse.storage/ipfs/QmWkLvUMaSUK2PyW2VA45WnTLbGA6rkZmik5pePUJbi8EL"
+                    "https://gateway.lighthouse.storage/ipfs/QmSM7vePcmMe3Lh3zP1crCoNXbUnmE5WM4ndvnhQNQ99sH"
                   }
                   alt="Your alt text"
                 />
@@ -60,7 +60,7 @@ const Carousel = (props) => {
                 <img
                   className="embla__slide__img embla__parallax__img"
                   src={
-                    "https://gateway.lighthouse.storage/ipfs/QmXfuEcsuDVVq7yYYBBHc7omxzX7xvzovmG6mjxcznrQfF"
+                    "https://gateway.lighthouse.storage/ipfs/Qma8aoofmqwKf1HhLSX311wBhJR689Lb3T9JUwSzRf1xjU"
                   }
                   alt="Your alt text"
                 />
@@ -73,7 +73,7 @@ const Carousel = (props) => {
                 <img
                   className="embla__slide__img embla__parallax__img"
                   src={
-                    "https://gateway.lighthouse.storage/ipfs/QmQ76gHK4reHqekSBzBFfoKjt7LzFsSkSc92gEPwx8Eg6p"
+                    "https://gateway.lighthouse.storage/ipfs/QmdWKMXhCvSmUrdGKE8qZzJJA4CJ8bBAZ73P8SRDL1ZWwc"
                   }
                   alt="Your alt text"
                 />
@@ -86,7 +86,20 @@ const Carousel = (props) => {
                 <img
                   className="embla__slide__img embla__parallax__img"
                   src={
-                    "https://gateway.lighthouse.storage/ipfs/QmYYqRnYbVpGRnocC2taCD11wEdg1Kkx8nUagygBxnnfbh"
+                    "https://gateway.lighthouse.storage/ipfs/QmR2QPNWPa9SFEFB1r3aLjEqY9iBouBujrcnz17fX2Ay9d"
+                  }
+                  alt="Your alt text"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="embla__slide">
+            <div className="embla__parallax">
+              <div className="embla__parallax__layer">
+                <img
+                  className="embla__slide__img embla__parallax__img"
+                  src={
+                    "https://gateway.lighthouse.storage/ipfs/QmZy6HADGZ6pdj8Jn7SJbfDmjpakKFJPTLetGVaBxxpjmW"
                   }
                   alt="Your alt text"
                 />
