@@ -36,7 +36,7 @@ import m3 from "../app/assests/m3.png";
 import Footer from "./footer";
 import Carousel from "./carousel";
 import Link from "next/link";
-const OPTIONS = { dragFree: true, loop: true };
+const OPTIONS = { loop: true, duration: 30 };
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
@@ -570,7 +570,10 @@ export default function Home() {
                   </div>
                   <div className={home.buttongetstart}>
                     <div>
-                      <Link href="https://smart-disperse.gitbook.io/smart-disperse/" target="blank">
+                      <Link
+                        href="https://smart-disperse.gitbook.io/smart-disperse/"
+                        target="blank"
+                      >
                         <button className={home.getstartbtn}>
                           Start now ➔
                         </button>
