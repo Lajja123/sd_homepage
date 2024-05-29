@@ -29,118 +29,16 @@ import scrolll from "./assests/scroll.png";
 import eth from "./assests/ethereum.png";
 import mode from "./assests/mode.png";
 import optimism from "./assests/optimism.png";
-import tron from "./assests/tron.webp";
+import arbitrum from "./assests/arbitrum.png";
 import m1 from "../app/assests/m1.png";
 import m2 from "../app/assests/m2.png";
 import m3 from "../app/assests/m3.png";
 import Footer from "./footer";
-
-const Slideshow = () => {
-  const [slideIndex, setSlideIndex] = useState(1);
-
-  useEffect(() => {
-    showSlides(slideIndex);
-  }, [slideIndex]);
-
-  const plusSlides = (n) => {
-    setSlideIndex((prevIndex) => prevIndex + n);
-  };
-
-  const currentSlide = (n) => {
-    setSlideIndex(n);
-  };
-
-  const showSlides = (n) => {
-    let i;
-    const slides = document.getElementsByClassName(home.eachslidediv);
-    const dots = document.getElementsByClassName("dot");
-
-    if (n > slides.length) {
-      setSlideIndex(1); // Reset slideIndex to 1 if it exceeds total slides
-      return;
-    }
-    if (n < 1) {
-      setSlideIndex(slides.length);
-      return;
-    }
-
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[slideIndex - 1].style.display = "flex";
-    dots[slideIndex - 1].className += " active";
-  };
-
-  return (
-    <div className={home.slideshowcontainer}>
-      <a className={home.nextbtn} onClick={() => plusSlides(-1)}>
-        ❮
-      </a>
-      <div>
-        <div className={home.eachslidediv}>
-          <h1 className={home.numbertext}>Current Milestones</h1>
-          <Image src={m1} alt="none" width={600} height={"auto"} />
-          <div className={home.text}>
-            Alice can send  Native and ERC20 token to multiple users on the same
-            chain within one transaction
-          </div>
-        </div>
-
-        <div className={home.eachslidediv}>
-          <h1 className={home.numbertext}> Upcoming Milestone - 1</h1>
-          <Image src={m1} alt="none" width={600} />
-          <div className={home.text}>
-            Alice can send  Native and ERC20 token to multiple users on the same
-            chain within one transaction
-          </div>
-        </div>
-
-        <div className={home.eachslidediv}>
-          <h1 className={home.numbertext}>Upcoming Milestone - 2 </h1>
-          <Image src={m2} alt="none" width={600} height={300} />
-
-          <div className={home.text}>
-            Alice knows the desired chain of alice and bob and can send funds to
-            bob and charlie on the destination chain as well as the source chain
-            in one transaction.
-            <br /> Alice can transfer both native and ERC20 tokens. for native
-            token, Alice will provide ETH to the contract and that eth will be
-            converted into WETh and bridged to the destination chain. after
-            receiving on destination chain it will be converted to ETH again and
-            disperse. this all will be done in one transaction.
-          </div>
-        </div>
-
-        <div className={home.eachslidediv}>
-          <h1 className={home.numbertext}>Upcoming Milestone - 3</h1>
-
-          <Image src={m3} alt="none" width={600} />
-
-          <div className={home.text}>
-            Alice can send tokens to bob and charlie on one chain and to dev on
-            a different chain within one transaction
-          </div>
-        </div>
-      </div>
-      <a className={home.nextbtn} onClick={() => plusSlides(1)}>
-        ❯
-      </a>
-
-      <br />
-
-      <div style={{ textAlign: "center" }}>
-        <span className="dot" onClick={() => currentSlide(1)}></span>
-        <span className="dot" onClick={() => currentSlide(2)}></span>
-        <span className="dot" onClick={() => currentSlide(3)}></span>
-        <span className="dot" onClick={() => currentSlide(4)}></span>
-      </div>
-    </div>
-  );
-};
+import Carousel from "./carousel";
+import Link from "next/link";
+const OPTIONS = { dragFree: true, loop: true };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function Home() {
   return (
@@ -148,8 +46,6 @@ export default function Home() {
       <section className={home.homeMain1}>
         <Navbar />
         <div className={home.sec1}>
-          {/* <div className={home.titleSame2}>Smart-Disperse Your Crypto</div>
-          <div className={home.titleSame2}>Transactions!</div> */}
           <div className={home.colLeft}>
             <div className={home.titleSame1}>Cross-Chain Made Simple</div>
             <div className={home.peraSame}>
@@ -211,7 +107,7 @@ export default function Home() {
                 className={`${home.scrolll} ${home.logoinner}`}
               />
               <Image
-                src={tron}
+                src={arbitrum}
                 alt="none"
                 className={`${home.tron} ${home.logoinner}`}
               />
@@ -390,10 +286,8 @@ export default function Home() {
         </article>
       </section>
       <section className={home.sec2Main}>
-        <div className={home.sec2Div}>
-          {/* <div className={home.sec2Title}>Our Milestones</div> */}
-        </div>
-        <div className={home.slidercompdiv}>{/* <Slideshow /> */}</div>
+        <div className={home.sec2Title}>Our Milestones</div>
+        <Carousel slides={SLIDES} options={OPTIONS} />
       </section>
       <section className={home.sec2Main}>
         <div className={home.sec2Div}>
@@ -676,7 +570,11 @@ export default function Home() {
                   </div>
                   <div className={home.buttongetstart}>
                     <div>
-                      <button className={home.getstartbtn}>Start now ➔</button>
+                      <Link href="https://smart-disperse.gitbook.io/smart-disperse/" target="blank">
+                        <button className={home.getstartbtn}>
+                          Start now ➔
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -685,6 +583,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <Footer />
     </main>
   );

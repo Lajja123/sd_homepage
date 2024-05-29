@@ -98,7 +98,7 @@
   letter-spacing: 2px;
   text-align: center;
   margin-top: 150px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .sec2Title {
   color: #ffffff;
@@ -221,6 +221,7 @@
 }
 
 .card:hover {
+  animation: cardHover 0.2s;
   background: linear-gradient(
     180deg,
     rgba(22, 16, 32, 0) 0%,
@@ -229,6 +230,24 @@
   border: 1px solid #9272f7;
   box-shadow: 0px 4px 120.8px 0px #9f53ff8c inset;
   backdrop-filter: blur(3px);
+}
+@keyframes cardHover {
+  /* Define slower animation for hover state */
+  0% {
+    background: initial;
+    border: initial;
+    box-shadow: initial;
+  }
+  100% {
+    background: linear-gradient(
+      180deg,
+      rgba(22, 16, 32, 0) 0%,
+      rgba(37, 35, 59, 0.9) 100%
+    );
+    border: 1px solid #9272f7;
+    box-shadow: 0px 4px 120.8px 0px #9f53ff8c inset;
+    backdrop-filter: blur(3px);
+  }
 }
 .card:hover .cardImg1 {
   border: 1px solid;
@@ -482,6 +501,7 @@
 }
 
 .cardofgetstart:hover {
+  animation: btnn-hover 0.2s;
   background: linear-gradient(
     180deg,
     rgba(105, 119, 255, 0.9) 0%,
@@ -490,12 +510,29 @@
   border: 1px solid #9272f7;
   box-shadow: 0px 4px 120.8px 0px #3b7dffab inset;
 }
-
+@keyframes btnn-hover {
+  /* Define slower animation for hover state */
+  0% {
+    background: initial;
+    border: initial;
+    box-shadow: initial;
+  }
+  100% {
+    background: linear-gradient(
+      180deg,
+      rgba(105, 119, 255, 0.9) 0%,
+      rgba(37, 35, 59, 0.9) 100%
+    );
+    border: 1px solid #9272f7;
+    box-shadow: 0px 4px 120.8px 0px #3b7dffab inset;
+  }
+}
 .cardofgetstart:hover button {
   box-shadow: 0px 2.85px 11.63px 0px #9272f7 inset;
   border: 0.71px solid #ffffff;
   background: #0e1210cc;
 }
+
 .cardofgetstart button {
   background: #1615237a;
   border: 0.8px solid #ffffff;
