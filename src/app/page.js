@@ -115,7 +115,7 @@ export default function Home() {
           </div>
         </div>
         <div className={home.chainTitle}>Supported Chains</div>
-        <article className={home.wrapper}>
+        <div className={home.wrapper}>
           <div className="marquee">
             <div className="marqueegroup">
               <div
@@ -283,7 +283,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </article>
+        </div>
       </section>
       <section className={home.sec2Main}>
         <div className={home.sec2Title}>Our Milestones</div>

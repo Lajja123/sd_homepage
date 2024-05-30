@@ -29,6 +29,18 @@
   letter-spacing: 2px;
   font-weight: 300;
   font-size: 3.5rem;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .titleSame2 {
@@ -57,6 +69,8 @@
   padding: 5px 0px;
   font-weight: 500;
   width: 60%;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
   font-size: 15px;
   font-weight: 300;
   line-height: 1.5em;
@@ -217,7 +231,6 @@
     rgba(22, 16, 32, 0.765) 0%,
     rgba(9, 2, 30, 0.9) 100%
   );
-  justify-content: space-evenly;
 }
 
 .card:hover {
