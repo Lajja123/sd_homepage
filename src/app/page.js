@@ -462,7 +462,7 @@ export default function Home() {
                 </span>
                 <p className={home.bottom}>
                   Select Transactions Type
-                  <div>(same-chain/cross-chain ) </div>
+                  <div style={{color:"white"}}>(same-chain/cross-chain ) </div>
                 </p>
               </article>
 

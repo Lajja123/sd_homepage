@@ -7,6 +7,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.bgMain{
+    background: linear-gradient(180deg, rgb(23 23 72) 0%, rgb(56 13 105) 100%);
+}
 .sec1 {
   margin: 0px auto;
   margin-top: 130px;
@@ -180,7 +183,7 @@
 }
 .box1Pera {
   color: #d8d8d8;
-  text-align: left;
+  text-align: justify;
   letter-spacing: -0.005em;
   margin-bottom: 0%;
   font-size: 0.875em;
@@ -287,6 +290,7 @@
   font-size: 13px;
   font-weight: 200;
   margin: 14px 0px;
+
   display: -webkit-box;
   -webkit-line-clamp: 4; /* Number of lines to show */
   -webkit-box-orient: vertical;
@@ -426,6 +430,7 @@
   height: 40px;
   z-index: 5;
   border-radius: 50%;
+  background: black;
   position: absolute;
   box-shadow: 0 1px 5px 2px rgba(161, 161, 161, 0.39);
   top: 0%;
@@ -714,7 +719,7 @@ p.right {
   font-weight: 200;
   letter-spacing: 1px;
   margin: 0px;
-  margin-left: 240px;
+  margin-left: 100px;
   padding: 10px 20px;
   border-radius: 10px;
 }
