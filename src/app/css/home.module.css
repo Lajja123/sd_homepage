@@ -218,8 +218,8 @@
 .card {
   width: 300px;
   height: 240px;
+  border: 1px solid rgb(23 23 72);
   border-radius: 20px;
-  border-left-color: rgb(23 23 72);
   margin: 10px 15px;
   display: flex;
   cursor: pointer;
@@ -234,7 +234,6 @@
 }
 
 .card:hover {
-  animation: cardHover 0.2s;
   background: linear-gradient(
     180deg,
     rgba(22, 16, 32, 0) 0%,
@@ -244,24 +243,7 @@
   box-shadow: 0px 4px 120.8px 0px #9f53ff8c inset;
   backdrop-filter: blur(3px);
 }
-@keyframes cardHover {
-  /* Define slower animation for hover state */
-  0% {
-    background: initial;
-    border: initial;
-    box-shadow: initial;
-  }
-  100% {
-    background: linear-gradient(
-      180deg,
-      rgba(22, 16, 32, 0) 0%,
-      rgba(37, 35, 59, 0.9) 100%
-    );
-    border: 1px solid #9272f7;
-    box-shadow: 0px 4px 120.8px 0px #9f53ff8c inset;
-    backdrop-filter: blur(3px);
-  }
-}
+
 .card:hover .cardImg1 {
   border: 1px solid;
   border-image-source: linear-gradient(
@@ -514,32 +496,16 @@
 }
 
 .cardofgetstart:hover {
-  animation: btnn-hover 0.2s;
+
   background: linear-gradient(
     180deg,
     rgba(105, 119, 255, 0.9) 0%,
     rgba(37, 35, 59, 0.9) 100%
   );
-  border: 1px solid #9272f7;
+  /* border: 1px solid #9272f7; */
   box-shadow: 0px 4px 120.8px 0px #3b7dffab inset;
 }
-@keyframes btnn-hover {
-  /* Define slower animation for hover state */
-  0% {
-    background: initial;
-    border: initial;
-    box-shadow: initial;
-  }
-  100% {
-    background: linear-gradient(
-      180deg,
-      rgba(105, 119, 255, 0.9) 0%,
-      rgba(37, 35, 59, 0.9) 100%
-    );
-    border: 1px solid #9272f7;
-    box-shadow: 0px 4px 120.8px 0px #3b7dffab inset;
-  }
-}
+
 .cardofgetstart:hover button {
   box-shadow: 0px 2.85px 11.63px 0px #9272f7 inset;
   border: 0.71px solid #ffffff;
@@ -554,6 +520,7 @@
 .cardofgetstart {
   width: 300px;
   cursor: pointer;
+  border: 1px solid #9272f7;
   height: 230px;
   border-radius: 20px;
   border: none;
