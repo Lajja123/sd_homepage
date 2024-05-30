@@ -391,8 +391,9 @@ export default function Home() {
                   <div className={home.cardcontent1}>Sending Gas</div>
                   <div className={home.cardcontent2}>
                     If an address holds ERC-20 tokens but lacks gas,
-                    SmartDisperse allows you to acquire the needed gas using
-                    your ERC-20 tokens, facilitating smooth transactions.
+                    SmartDisperse allows you to acquire the needed gas by
+                    sending it from a different chain to your preferred chain,
+                    facilitating smooth transactions.
                   </div>
                 </div>
               </div>

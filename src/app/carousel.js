@@ -7,6 +7,8 @@ import {
 } from "./carouselArrowButton";
 import { DotButton, useDotButton } from "./carouselDotsButton";
 import "./carousel.css";
+import Link from "next/link";
+import { Tooltip, Button } from "@nextui-org/react";
 
 const TWEEN_FACTOR_BASE = 0.2;
 
@@ -31,78 +33,138 @@ const Carousel = (props) => {
           <div className="embla__slide">
             <div className="embla__parallax">
               <div className="embla__parallax__layer">
-                <img
-                  className="embla__slide__img embla__parallax__img"
-                  src={
-                    "https://gateway.lighthouse.storage/ipfs/QmeiZvhkJWn5twr7KtWJ74UpZRBUkgKVv4BLLZPDWHTQfg"
-                  }
-                  alt="Your alt text"
-                />
+                <Tooltip
+                     content="Click on below image to open the milestone in a new tab"
+                  className="tooltip"
+                >
+                  <Link
+                    target="black"
+                    href="https://gateway.lighthouse.storage/ipfs/QmeiZvhkJWn5twr7KtWJ74UpZRBUkgKVv4BLLZPDWHTQfg"
+                  >
+                    <img
+                      className="embla__slide__img embla__parallax__img"
+                      src={
+                        "https://gateway.lighthouse.storage/ipfs/QmeiZvhkJWn5twr7KtWJ74UpZRBUkgKVv4BLLZPDWHTQfg"
+                      }
+                      alt="Your alt text"
+                    />
+                  </Link>
+                </Tooltip>
               </div>
             </div>
           </div>
           <div className="embla__slide">
             <div className="embla__parallax">
               <div className="embla__parallax__layer">
-                <img
-                  className="embla__slide__img embla__parallax__img"
-                  src={
-                    "https://gateway.lighthouse.storage/ipfs/QmSM7vePcmMe3Lh3zP1crCoNXbUnmE5WM4ndvnhQNQ99sH"
-                  }
-                  alt="Your alt text"
-                />
+                <Tooltip
+                     content="Click on below image to open the milestone in a new tab"
+                  className="tooltip"
+                >
+                  <Link
+                    target="black"
+                    href="https://gateway.lighthouse.storage/ipfs/QmSM7vePcmMe3Lh3zP1crCoNXbUnmE5WM4ndvnhQNQ99sH"
+                  >
+                    <img
+                      className="embla__slide__img embla__parallax__img"
+                      src={
+                        "https://gateway.lighthouse.storage/ipfs/QmSM7vePcmMe3Lh3zP1crCoNXbUnmE5WM4ndvnhQNQ99sH"
+                      }
+                      alt="Your alt text"
+                    />
+                  </Link>
+                </Tooltip>
               </div>
             </div>
           </div>
           <div className="embla__slide">
             <div className="embla__parallax">
               <div className="embla__parallax__layer">
-                <img
-                  className="embla__slide__img embla__parallax__img"
-                  src={
-                    "https://gateway.lighthouse.storage/ipfs/Qma8aoofmqwKf1HhLSX311wBhJR689Lb3T9JUwSzRf1xjU"
-                  }
-                  alt="Your alt text"
-                />
+                <Tooltip
+                     content="Click on below image to open the milestone in a new tab"
+                  className="tooltip"
+                >
+                  <Link
+                    target="black"
+                    href="https://gateway.lighthouse.storage/ipfs/Qma8aoofmqwKf1HhLSX311wBhJR689Lb3T9JUwSzRf1xjU"
+                  >
+                    <img
+                      className="embla__slide__img embla__parallax__img"
+                      src={
+                        "https://gateway.lighthouse.storage/ipfs/Qma8aoofmqwKf1HhLSX311wBhJR689Lb3T9JUwSzRf1xjU"
+                      }
+                      alt="Your alt text"
+                    />
+                  </Link>
+                </Tooltip>
               </div>
             </div>
           </div>
           <div className="embla__slide">
             <div className="embla__parallax">
               <div className="embla__parallax__layer">
-                <img
-                  className="embla__slide__img embla__parallax__img"
-                  src={
-                    "https://gateway.lighthouse.storage/ipfs/QmdWKMXhCvSmUrdGKE8qZzJJA4CJ8bBAZ73P8SRDL1ZWwc"
-                  }
-                  alt="Your alt text"
-                />
+                <Tooltip
+                     content="Click on below image to open the milestone in a new tab"
+                  className="tooltip"
+                >
+                  <Link
+                    target="black"
+                    href="https://gateway.lighthouse.storage/ipfs/QmdWKMXhCvSmUrdGKE8qZzJJA4CJ8bBAZ73P8SRDL1ZWwc"
+                  >
+                    <img
+                      className="embla__slide__img embla__parallax__img"
+                      src={
+                        "https://gateway.lighthouse.storage/ipfs/QmdWKMXhCvSmUrdGKE8qZzJJA4CJ8bBAZ73P8SRDL1ZWwc"
+                      }
+                      alt="Your alt text"
+                    />
+                  </Link>
+                </Tooltip>
               </div>
             </div>
           </div>
           <div className="embla__slide">
             <div className="embla__parallax">
               <div className="embla__parallax__layer">
-                <img
-                  className="embla__slide__img embla__parallax__img"
-                  src={
-                    "https://gateway.lighthouse.storage/ipfs/QmR2QPNWPa9SFEFB1r3aLjEqY9iBouBujrcnz17fX2Ay9d"
-                  }
-                  alt="Your alt text"
-                />
+                <Tooltip
+                     content="Click on below image to open the milestone in a new tab"
+                  className="tooltip"
+                >
+                  <Link
+                    target="black"
+                    href="https://gateway.lighthouse.storage/ipfs/QmR2QPNWPa9SFEFB1r3aLjEqY9iBouBujrcnz17fX2Ay9d"
+                  >
+                    <img
+                      className="embla__slide__img embla__parallax__img"
+                      src={
+                        "https://gateway.lighthouse.storage/ipfs/QmR2QPNWPa9SFEFB1r3aLjEqY9iBouBujrcnz17fX2Ay9d"
+                      }
+                      alt="Your alt text"
+                    />
+                  </Link>
+                </Tooltip>
               </div>
             </div>
           </div>
           <div className="embla__slide">
             <div className="embla__parallax">
               <div className="embla__parallax__layer">
-                <img
-                  className="embla__slide__img embla__parallax__img"
-                  src={
-                    "https://gateway.lighthouse.storage/ipfs/QmZy6HADGZ6pdj8Jn7SJbfDmjpakKFJPTLetGVaBxxpjmW"
-                  }
-                  alt="Your alt text"
-                />
+                <Tooltip
+                     content="Click on below image to open the milestone in a new tab"
+                  className="tooltip"
+                >
+                  <Link
+                    href="https://gateway.lighthouse.storage/ipfs/QmZy6HADGZ6pdj8Jn7SJbfDmjpakKFJPTLetGVaBxxpjmW"
+                    target="black"
+                  >
+                    <img
+                      className="embla__slide__img embla__parallax__img"
+                      src={
+                        "https://gateway.lighthouse.storage/ipfs/QmZy6HADGZ6pdj8Jn7SJbfDmjpakKFJPTLetGVaBxxpjmW"
+                      }
+                      alt="Your alt text"
+                    />
+                  </Link>
+                </Tooltip>
               </div>
             </div>
           </div>
