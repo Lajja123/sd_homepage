@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Navbar from "./navbar";
-import home from "./home.module.css";
-import "../app/chain.css";
+import Navbar from "./navbar/navbar";
+import home from "./css/home.module.css";
+import "./css/chain.css";
 import a from "./assests/1.png";
 import {
   faLink,
@@ -33,8 +33,8 @@ import arbitrum from "./assests/arbitrum.png";
 import m1 from "../app/assests/m1.png";
 import m2 from "../app/assests/m2.png";
 import m3 from "../app/assests/m3.png";
-import Footer from "./footer";
-import Carousel from "./carousel";
+import Footer from "./footer/footer";
+import Carousel from "./milsestone/carousel";
 import Link from "next/link";
 const OPTIONS = { loop: true, duration: 30 };
 const SLIDE_COUNT = 5;

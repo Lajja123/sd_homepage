@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./assests/logo.png";
+import logo from "../assests/logo.png";
 import navStyle from "./navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,11 +9,7 @@ function Navbar() {
     <div className={navStyle.navMain}>
       <div>
         <Link href="/">
-          <Image
-            className={navStyle.logo}
-            src={logo}
-            alt="not foundd"
-          />
+          <Image className={navStyle.logo} src={logo} alt="not foundd" />
         </Link>
       </div>
       <div>

@@ -3,7 +3,7 @@
   /* min-height: 100vh; */
   justify-content: space-evenly;
   background-color: rgba(39, 46, 53, 0);
-  background-image: url("./assests/Group.svg");
+  background-image: url("../assests/Group.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }

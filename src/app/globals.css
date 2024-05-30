@@ -8,9 +8,30 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-background: linear-gradient(180deg, rgb(23 23 72) 0%, rgb(56 13 105) 100%); 
- min-height: 100vh;
- background-repeat: no-repeat;
-  margin: 0;
+  background: linear-gradient(180deg, rgb(23 23 72) 0%, rgb(56 13 105) 100%);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  --sb-track-color: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    #0a11b5;
+  --sb-thumb-color: #a6ff35;
+  --sb-size: 6px;
+  margin: 0px;
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+body::-webkit-scrollbar {
+  width: var(--sb-size);
 }
 
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+}

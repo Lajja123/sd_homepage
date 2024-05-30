@@ -1,8 +1,8 @@
 import React from "react";
-import discord from "./assests/discord.png";
-import telegram from "./assests/telegram.png";
-import twitter from "./assests/twitter.png";
-import mirror from "./assests/mirror.svg";
+import discord from "../assests/discord.png";
+import telegram from "../assests/telegram.png";
+import twitter from "../assests/twitter.png";
+import mirror from "../assests/mirror.svg";
 import footer from "./footer.module.css";
 import Image from "next/image";
 
