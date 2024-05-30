@@ -4,7 +4,7 @@ import Image from "next/image";
 import Navbar from "./navbar/navbar";
 import home from "./css/home.module.css";
 import "./css/chain.css";
-import a from "./assests/1.png";
+import user from "./assests/2.svg";
 import {
   faLink,
   faMagnifyingGlassChart,
@@ -334,7 +334,7 @@ export default function Home() {
             <div className={home.gridBox1}>
               <div className={home.gridImg}>
                 <Image
-                  src={a}
+                  src={user}
                   alt="none"
                   width={100}
                   height={100}
@@ -542,9 +542,9 @@ export default function Home() {
                     Blockchain
                   </div>
                   <div className={home.buttongetstart}>
-                    <div>
+                    <Link href="http://app.smartdisperse.xyz/cross-chain">
                       <button className={home.getstartbtn}>Start now ➔</button>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -556,9 +556,9 @@ export default function Home() {
                     and Accessibility
                   </div>
                   <div className={home.buttongetstart}>
-                    <div>
+                    <Link href="http://app.smartdisperse.xyz/same-chain">
                       <button className={home.getstartbtn}>Start now ➔</button>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>
